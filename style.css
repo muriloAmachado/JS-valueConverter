@@ -3,6 +3,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -25,3 +26,85 @@ main{
     width: 600px;
     border-radius: 12px;
 }
+
+main h1{
+    margin-bottom: 24px;
+}
+
+p{
+    font-size: larger;
+    margin-bottom: 4px;
+}
+
+#selectors{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+select{
+    background-color: #C8CFD7;
+    border-radius: 8px;
+    height: 32px;
+    width: 144px;
+    font-size:larger;
+}
+
+#cotacao{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 96px;
+}
+
+#userValueInput{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    background-color: #C8CFD7;
+    width: 240px;
+    padding-left: 12px;
+    border-radius: 16px;
+    height: 40px;
+    font-size: larger;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+#formConfirm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.submitButton{
+    background-color: #C8CFD7;
+    border-radius: 4px;
+    width: 133px;
+    height: 42px;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+#convertValue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4{
+    padding-bottom: 4px;
+}
+
+
+
