@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Conversor de moedas</title>
 </head>
     <body>
@@ -33,14 +33,14 @@
                 </div>
             </span>
            <div id="cotacao">
-                <h2 id="oneCoin">R$ 1,00</h2>
-                <h2 id="cotationCoin">R$ 1,00</h2>
+                <h2 id="oneCoin"></h2>
+                <h2 id="cotationCoin"></h2>
             </div>
             <div id="userValueInput">
                 <input type="number" id="userValue" placeholder="Valor a ser convertido"/>
             </div>
             <div id="formConfirm">
-                <button id="confirmBtn" class="submitButton">Converter</button>
+                <button id="confirmBtn" class="submitButton" onclick="converterValor()">Converter</button>
             </div>
             <div id="convertValue">
                 <h4>Valor convertido:</h4>

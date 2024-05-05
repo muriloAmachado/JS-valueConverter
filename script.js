@@ -1,55 +1,37 @@
-let oneCoin = document.querySelector('#oneCoin').innerHTML;
-let cotationCoin = document.querySelector('#cotationCoin').innerHTML;
+var oneCoin = document.querySelector('#oneCoin').value;
+var cotationCoin = document.querySelector('#cotationCoin').innerHTML;
 
-console.log(oneCoin);
+var userSolicitation = [];
 
 function refreshSelect(){
-    let inputCoin = document.querySelector('#userCoin');
-    let inputCoinOption = inputCoin.options[inputCoin.selectedIndex];
+    var inputCoin = document.querySelector('#userCoin');
+    var inputCoinOption = inputCoin.options[inputCoin.selectedIndex];
     var inputOption = inputCoinOption.value;
 
-    if (inputOption === "dolar") {
-        document.getElementById("oneCoin").textContent = "$ 1,00";
+    if(userSolicitation[0] != inputOption){
+        userSolicitation.splice(0, 1, inputOption);
     }
-
-    if (inputOption === "peso") {
-        document.getElementById("oneCoin").textContent = "AR$ 1,00";
-    }
-
-    if (inputOption === "euro") {
-        document.getElementById("oneCoin").textContent = "€ 1,00";
-    }
-
-    if (inputOption === "libra") {
-        document.getElementById("oneCoin").textContent = "£ 1,00";
-    }
-
 }
 
 function refreshOutSelect(){
-    let outCoin = document.querySelector('#coinConverter');
-    let outCoinOption = outCoin.options[outCoin.selectedIndex];
+    var outCoin = document.querySelector('#coinConverter');
+    var outCoinOption = outCoin.options[outCoin.selectedIndex];
     var outOption = outCoinOption.value;
 
-    if (outOption === "dolar") {
-        document.getElementById("cotationCoin").textContent = "$ 1,00";
+    if(userSolicitation[1] != outOption){
+        userSolicitation.splice(1, 1, outOption);
     }
+}
 
-    if (outOption === "peso") {
-        document.getElementById("cotationCoin").textContent = "AR$ 1,00";
+function converterValor() {
+    var userInput = document.getElementById("userValue").value;
+    var floatValue = parseFloat(userInput).toFixed(2);
+    if(userSolicitation[2] != floatValue){
+        userSolicitation.splice(2, 2, floatValue);
     }
-
-    if (outOption === "euro") {
-        document.getElementById("cotationCoin").textContent = "€ 1,00";
-    }
-
-    if (outOption === "libra") {
-        document.getElementById("cotationCoin").textContent = "£ 1,00";
-    }
-
-    console.log(outOption);
 }
 
 
 
-console.log(oneCoin);
+
+
