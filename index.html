@@ -4,53 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Conversor de moedas</title>
 </head>
-<body>
-    <main>
-        <h1>Conversor de moedas</h1>
-        <span id="selectors">
-            <div>
-                <p>De</p>
-                <select id="userCoin">
-                    <option value="real">Real</option>
-                    <option value="dolar">Dólar</option>
-                    <option value="peso">Peso</option>
-                    <option value="euro">Euro</option>
-                    <option value="yuan">Yuan chinês</option>
-                </select>
+    <body>
+        <main>
+            <h1>Conversor de moedas</h1>
+            <span id="selectors">
+                <div>
+                    <p>De</p>
+                    <select id="userCoin" onchange="refreshSelect()">
+                        <option value="real">Real</option>
+                        <option value="dolar">Dólar</option>
+                        <option value="peso">Peso</option>
+                        <option value="euro">Euro</option>
+                        <option value="libra">Libra</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Para</p>
+                    <select id="coinConverter" onchange="refreshOutSelect()">
+                        <option value="real">Real</option>
+                        <option value="dolar">Dólar</option>
+                        <option value="peso">Peso</option>
+                        <option value="euro">Euro</option>
+                        <option value="libra">Libra</option>
+                    </select>
+                </div>
+            </span>
+           <div id="cotacao">
+                <h2 id="oneCoin">R$ 1,00</h2>
+                <h2 id="cotationCoin">R$ 1,00</h2>
             </div>
-            <div>
-                <p>Para</p>
-                <select id="coinConverter">
-                    <option value="real">Real</option>
-                    <option value="dolar">Dólar</option>
-                    <option value="peso">Peso</option>
-                    <option value="euro">Euro</option>
-                    <option value="yuan">Yuan chinês</option>
-                </select>
+            <div id="userValueInput">
+                <input type="number" id="userValue" placeholder="Valor a ser convertido"/>
             </div>
-        </span>
+            <div id="formConfirm">
+                <button id="confirmBtn" class="submitButton">Converter</button>
+            </div>
+            <div id="convertValue">
+                <h4>Valor convertido:</h4>
+                <h2>$ 99,99</h2>
+            </div>
+        </main>
 
-       <div id="cotacao">
-            <h2>R$ 1,00</h2>   
-            <h2>R$ 1,00</h2>   
-        </div>
 
-        <div id="userValueInput">
-            <input type="number" id="userValue" placeholder="Valor a ser convertido"/>
-        </div>
-
-        <div id="formConfirm">
-            <button class="submitButton">Converter</button>
-        </div>
-        
-        <div id="convertValue">
-            <h4>Valor convertido:</h4>
-            <h2>$ 99,99</h2>
-        </div>
-        
-    </main>
-    
-</body>
+    </body>
+    <script src="script.js"></script>
 </html>
