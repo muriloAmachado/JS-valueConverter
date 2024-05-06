@@ -161,8 +161,8 @@ function pesoConversion(userSolicitation){
 
     if(userSolicitation[1] == 'libra'){
         var resultConversion = (userSolicitation[2]*0.00091);
-        document.getElementById("cotationCoin").textContent = `€ ${1*0.00091}`;
-        total.textContent = `€ ${resultConversion}`;
+        document.getElementById("cotationCoin").textContent = `£ ${1*0.00091}`;
+        total.textContent = `£ ${resultConversion}`;
     }
 }
 
