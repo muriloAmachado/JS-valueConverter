@@ -220,7 +220,6 @@ function libraConversion(userSolicitation){
     }
 
     total.textContent = `£ ${resultConversion}`;
-
 }
 
 
